@@ -38,7 +38,7 @@ It's easy to use the resulting model in an [iOS application](https://developer.a
 
 <p align="center"><img src="https://docs-assets.developer.apple.com/published/a2c37bce1f/689f61a6-1087-4112-99d9-bbfb326e3138.png" alt="Turi Create" width="600"></p>
 
-With Turi Create, you can can tackle a number of common scenarios:
+With Turi Create, you can tackle a number of common scenarios:
 * [Recommender systems](userguide/recommender/introduction.md)
 * [Image classification](userguide/image_classifier/introduction.md)
 * [Image similarity](userguide/image_similarity/introduction.md)
@@ -76,7 +76,6 @@ For detailed instructions for different varieties of Linux see [LINUX\_INSTALL.m
 For common installation issues see [INSTALL\_ISSUES.md](INSTALL_ISSUES.md).
 
 We recommend using virtualenv to use, install, or build Turi Create. 
-Be sure to install virtualenv using your system pip.
 
 ```shell
 pip install virtualenv
@@ -84,20 +83,24 @@ pip install virtualenv
 
 The method for installing *Turi Create* follows the
 [standard python package installation steps](https://packaging.python.org/installing/).
-To create a Python virtual environment called `venv` follow these steps:
+To create and activate a Python virtual environment called `venv` follow these steps:
 
 ```shell
 # Create a Python virtual environment
 cd ~
 virtualenv venv
+
+# Activate your virtual environment
+source ~/venv/bin/activate
+```
+Alternatively, if you are using [Anaconda](https://www.anaconda.com/what-is-anaconda/), you may use its virtual environment:
+```shell
+conda create -n venv python=2.7 anaconda
+source activate venv
 ```
 
-To activate your new virtual environment and install `Turi Create` in this environment, follow these steps:
+To install `Turi Create` within your virtual environment:
 ```shell
-# Active your virtual environment
-source ~/venv/bin/activate
-
-# Install Turi Create in the new virtual environment, pythonenv
 (venv) pip install -U turicreate
 ```
 
